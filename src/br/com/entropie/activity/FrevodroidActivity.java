@@ -38,7 +38,7 @@ public class FrevodroidActivity extends ListActivity {
 		
 		Calendar calendar = (Calendar) l.getAdapter().getItem(position);
 		
-		Intent it = new Intent(this, TimeActivity.class);
+		Intent it = new Intent(this, MapsActivity.class);
 		it.putExtra("calendar", calendar.getDayOfWeek());
 		startActivity(it);
 	}
