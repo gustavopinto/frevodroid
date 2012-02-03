@@ -26,6 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDayOfWeek"
         android:layout_toRightOf="@+id/imgIcon"
-        android:text="TextView" />
+        android:text="TextView"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        
+         />
 
 </RelativeLayout>

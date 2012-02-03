@@ -1,8 +1,11 @@
 package br.com.entropie.adapter;
 
+import java.io.IOException;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +46,16 @@ public class CalendarAdapter extends BaseAdapter {
 					R.layout.calendar, null);
 
 			holder = new Holder();
-//			holder.imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);
+			
+			holder.imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);
+			Bitmap bMap2 = null;
+			try {
+				bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open("date2.png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			holder.imgIcon.setImageBitmap(bMap2);
+			
 			holder.txtDayOfWeek = (TextView) convertView.findViewById(R.id.txtDayOfWeek);
 			holder.txtDescription = (TextView) convertView.findViewById(R.id.txtDescription);
 			convertView.setTag(holder);
@@ -52,7 +64,14 @@ public class CalendarAdapter extends BaseAdapter {
 			holder = (Holder) convertView.getTag();
 		}
 
-//		holder.imgIcon.setImageDrawable(calendar.getIcon());
+		Bitmap bMap2 = null;
+		try {
+			bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open("date2.png"));
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		
+		holder.imgIcon.setImageBitmap(bMap2);
 		holder.txtDayOfWeek.setText(calendar.getDayOfWeek());
 		holder.txtDescription.setText(calendar.getDescription());
 		return convertView;

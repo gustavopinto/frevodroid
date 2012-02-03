@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
+import br.com.entropie.R;
 import br.com.entropie.adapter.CalendarAdapter;
 import br.com.entropie.entity.Calendar;
 
@@ -19,15 +20,15 @@ public class FrevodroidActivity extends ListActivity {
 		
 		List<Calendar> calendar = new ArrayList<Calendar>();
 		
-//		ImageView icon = (ImageView) findViewById(R.id.imgIcon);
-//	    Bitmap bMap = BitmapFactory.decodeResource(getResources(), R.drawable.date);	
-//        icon.setImageBitmap(bMap);
-
-		calendar.add(new Calendar(this, null, "Segunda-Feira", "Eto, Frevo, Maracatu"));
-		calendar.add(new Calendar(this, null, "Terca-Feira", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
-		calendar.add(new Calendar(this, null, "Quarta-Feira", "Ivete e "));
-		calendar.add(new Calendar(this, null, "Quinta-Feira", "Calypso"));
-
+		calendar.add(new Calendar(this, R.id.imgIcon, "Quarta-Feira", "Ivete e "));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Quinta-Feira", "Calypso"));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Sexta-Feira", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Sábado", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Domingo", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Segunda-Feira", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Terca-Feira", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
+		calendar.add(new Calendar(this, R.id.imgIcon, "Quarta", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
+		
 		setListAdapter(new CalendarAdapter(this, calendar));
 	}
 	

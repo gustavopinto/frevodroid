@@ -6,18 +6,12 @@ import android.graphics.drawable.Drawable;
 public class Calendar {
 
 	private String dayOfWeek, description;
-	private Drawable icon;
+	private int icon;
 
-	public Calendar(Context ctx, Drawable icon, String dayOfWeek, String description) {
+	public Calendar(Context ctx, int icon, String dayOfWeek, String description) {
 		this.dayOfWeek = dayOfWeek;
 		this.description = description;
 		this.icon = icon;
-//		PackageManager pm = ctx.getPackageManager();
-//		try {
-//			this.icon = pm.getActivityIcon(intent);
-//		} catch (NameNotFoundException e) {
-//			e.printStackTrace();
-//		}
 	}
 
 	public String getDayOfWeek() {
@@ -28,7 +22,7 @@ public class Calendar {
 		return description;
 	}
 	
-	public Drawable getIcon() {
+	public int getIcon() {
 		return icon;
 	}
 	
