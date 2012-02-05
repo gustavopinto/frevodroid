@@ -20,14 +20,14 @@ public class FrevodroidActivity extends ListActivity {
 		
 		List<Calendar> calendar = new ArrayList<Calendar>();
 		
-		calendar.add(new Calendar(this, R.id.imgIcon, "Quarta-Feira", "Ivete e "));
-		calendar.add(new Calendar(this, R.id.imgIcon, "Quinta-Feira", "Calypso"));
-		calendar.add(new Calendar(this, android.R.id.icon1, "Sexta-Feira", "Eto, Frevo, Maracatu"));
-		calendar.add(new Calendar(this, R.id.imgIcon, "Sábado", "Eto, Frevo, Maracatu"));
-		calendar.add(new Calendar(this, R.id.imgIcon, "Domingo", "Eto, Frevo, Maracatu"));
-		calendar.add(new Calendar(this, R.id.imgIcon, "Segunda-Feira", "Eto, Frevo, Maracatu"));
-		calendar.add(new Calendar(this, R.id.imgIcon, "Terca-Feira", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
-		calendar.add(new Calendar(this, R.id.imgIcon, "Quarta", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
+		calendar.add(new Calendar(this, "17", "Quarta-Feira", "Ivete e "));
+		calendar.add(new Calendar(this, "18", "Quinta-Feira", "Calypso"));
+		calendar.add(new Calendar(this, "19", "Sexta-Feira", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, "20", "Sábado", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, "21", "Domingo", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, "22", "Segunda-Feira", "Eto, Frevo, Maracatu"));
+		calendar.add(new Calendar(this, "23", "Terca-Feira", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
+		calendar.add(new Calendar(this, "24", "Quarta", "Pato fu, Alceu valenca, Mundo livre SA, Frevodroid"));
 		
 		setListAdapter(new CalendarAdapter(this, calendar));
 	}

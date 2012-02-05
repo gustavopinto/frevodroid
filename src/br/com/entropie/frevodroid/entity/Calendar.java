@@ -5,13 +5,12 @@ import android.graphics.drawable.Drawable;
 
 public class Calendar {
 
-	private String dayOfWeek, description;
-	private int icon;
+	private String dayOfWeek, description, dayIcon;
 
-	public Calendar(Context ctx, int icon, String dayOfWeek, String description) {
+	public Calendar(Context ctx, String dayIcon, String dayOfWeek, String description) {
 		this.dayOfWeek = dayOfWeek;
 		this.description = description;
-		this.icon = icon;
+		this.dayIcon= dayIcon;
 	}
 
 	public String getDayOfWeek() {
@@ -22,9 +21,7 @@ public class Calendar {
 		return description;
 	}
 	
-	public int getIcon() {
-		return icon;
+	public String getDayIcon() {
+		return dayIcon + ".png";
 	}
-	
-
 }

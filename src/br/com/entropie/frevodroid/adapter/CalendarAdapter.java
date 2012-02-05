@@ -58,7 +58,7 @@ public class CalendarAdapter extends BaseAdapter {
 				Bitmap bMap2 = null;
 
 				bMap2 = BitmapFactory.decodeStream(this.context.getAssets()
-						.open("Segunda-Feira.png"));
+						.open(calendar.getDayIcon()));
 				holder.imgIcon.setImageBitmap(bMap2);
 
 				convertView.setTag(holder);
@@ -71,7 +71,8 @@ public class CalendarAdapter extends BaseAdapter {
 			holder.txtDescription.setText(calendar.getDescription());
 
 			Bitmap bMap2 = null;
-			bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open("Segunda-Feira.png"));
+			bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open(
+					calendar.getDayIcon()));
 
 			holder.imgIcon.setImageBitmap(bMap2);
 
