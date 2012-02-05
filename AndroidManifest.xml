@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="10" />
+    <uses-sdk android:minSdkVersion="7" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".activity.TimeActivity" />
         <activity android:name=".activity.RotaActivity" />
+        <activity android:name=".activity.RotaActivity" />
+        <activity android:name=".activity.Rota3Activity" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />

@@ -34,15 +34,15 @@ public class TimeAdapter extends BaseAdapter {
 	}
 
 	public View getView(int position, View view, ViewGroup group) {
-		if (view == null) {
-			view = LayoutInflater.from(this.ctx).inflate(R.layout.time, null);
-			view.setTag(time);
-		}
-
-		Time time = (Time) getItem(position);
-
-		TextView txtHour = (TextView) view.findViewById(R.id.txtHour);
-		txtHour.setText(time.getTime());
+//		if (view == null) {
+//			view = LayoutInflater.from(this.ctx).inflate(R.layout.time, null);
+//			view.setTag(time);
+//		}
+//
+//		Time time = (Time) getItem(position);
+//
+//		TextView txtHour = (TextView) view.findViewById(R.id.txtHour);
+//		txtHour.setText(time.getTime());
 
 		return view;
 	}

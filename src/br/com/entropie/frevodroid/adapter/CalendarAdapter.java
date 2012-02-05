@@ -1,6 +1,5 @@
 package br.com.entropie.frevodroid.adapter;
 
-import java.io.IOException;
 import java.util.List;
 
 import android.content.Context;
@@ -40,41 +39,48 @@ public class CalendarAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup group) {
 		Calendar calendar = (Calendar) getItem(position);
 
-		Holder holder;
-		if (convertView == null) {
-			convertView = LayoutInflater.from(this.context).inflate(
-					R.layout.calendar, null);
-
-			holder = new Holder();
-			
-			holder.imgIcon = (ImageView) convertView.findViewById(R.id.imgIcon);
-			Bitmap bMap2 = null;
-			try {
-				bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open("date2.png"));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			holder.imgIcon.setImageBitmap(bMap2);
-			
-			holder.txtDayOfWeek = (TextView) convertView.findViewById(R.id.txtDayOfWeek);
-			holder.txtDescription = (TextView) convertView.findViewById(R.id.txtDescription);
-			convertView.setTag(holder);
-
-		} else {
-			holder = (Holder) convertView.getTag();
-		}
-
-		Bitmap bMap2 = null;
 		try {
-			bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open("date2.png"));
+
+			Holder holder;
+			if (convertView == null) {
+				convertView = LayoutInflater.from(this.context).inflate(
+						R.layout.calendar, null);
+
+				holder = new Holder();
+
+				holder.txtDayOfWeek = (TextView) convertView
+						.findViewById(R.id.txtDayOfWeek);
+				holder.txtDescription = (TextView) convertView
+						.findViewById(R.id.txtDescription);
+
+				holder.imgIcon = (ImageView) convertView
+						.findViewById(R.id.imgIcon);
+				Bitmap bMap2 = null;
+
+				bMap2 = BitmapFactory.decodeStream(this.context.getAssets()
+						.open("Segunda-Feira.png"));
+				holder.imgIcon.setImageBitmap(bMap2);
+
+				convertView.setTag(holder);
+
+			} else {
+				holder = (Holder) convertView.getTag();
+			}
+
+			holder.txtDayOfWeek.setText(calendar.getDayOfWeek());
+			holder.txtDescription.setText(calendar.getDescription());
+
+			Bitmap bMap2 = null;
+			bMap2 = BitmapFactory.decodeStream(this.context.getAssets().open("Segunda-Feira.png"));
+
+			holder.imgIcon.setImageBitmap(bMap2);
+
+			return convertView;
+
 		} catch (Throwable e) {
 			e.printStackTrace();
+			return null;
 		}
-		
-		holder.imgIcon.setImageBitmap(bMap2);
-		holder.txtDayOfWeek.setText(calendar.getDayOfWeek());
-		holder.txtDescription.setText(calendar.getDescription());
-		return convertView;
 	}
 
 	static class Holder {

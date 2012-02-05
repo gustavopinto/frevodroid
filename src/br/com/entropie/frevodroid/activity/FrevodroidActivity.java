@@ -37,9 +37,13 @@ public class FrevodroidActivity extends ListActivity {
 		super.onListItemClick(l, v, position, id);
 		
 		Calendar calendar = (Calendar) l.getAdapter().getItem(position);
+		if (calendar.getDayOfWeek().toLowerCase().contains("feira")) {
+			Intent it = new Intent(this, RotaActivity.class);
+			startActivity(it);
+		} else {
+			Intent it = new Intent(this, Rota3Activity.class);
+			startActivity(it);
+		}
 		
-		Intent it = new Intent(this, RotaActivity.class);
-//		it.putExtra("calendar", calendar.getDayOfWeek());
-		startActivity(it);
 	}
 }
