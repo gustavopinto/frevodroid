@@ -21,8 +21,7 @@
         </activity>
         <activity android:name=".activity.TimeActivity" />
         <activity android:name=".activity.RotaActivity" />
-        <activity android:name=".activity.RotaActivity" />
-        <activity android:name=".activity.Rota3Activity" />
+        <activity android:name=".activity.TimeActivity" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
