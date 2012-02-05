@@ -27,11 +27,11 @@ public class RotaActivity extends MapActivity implements LocationListener {
 
 		mapController = mapView.getController();
 
-		mapController.setCenter(getRecifePoint());
+//		mapController.setCenter(getRecifePoint());
 		mapController.setZoom(14);
 		
 		new RotaAsyncTask(mapView).execute(  
-			      -8.282503, -35.981941,  
+			      -8.0250, -34.8194,  
 			      -8.0424, -34.8949);  
 	}
 
@@ -65,7 +65,8 @@ public class RotaActivity extends MapActivity implements LocationListener {
 	}
 
 	private GeoPoint getRecifePoint() {
-		return new GeoPoint(-8197218, -34904251);
+		return new GeoPoint((int) (-8197218 * 1E6), (int) (-34904251 * 1E6));
+//		return new GeoPoint(-8197218, -34904251);
 	}
 
 }
